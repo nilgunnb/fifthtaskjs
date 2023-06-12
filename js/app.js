@@ -14,11 +14,16 @@ Area(-5)
 
 SmallestElement = (array) =>{
   if (Array.isArray(array)){
-    array.map(parseFloat);
-    console.log(Math.min(array));
+    let smallestelement = array[0];
+    for (let i=1; i < array.length; i++ ){
+      if (array[i] < smallestelement){
+        smallestelement = array[i]
+      }
+    }
+    console.log(smallestelement)
   }
   else{
-    console.log("the given element is not an array.")
+    console.log("the given parameter is not an array.")
   }
 }
 
