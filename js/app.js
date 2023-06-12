@@ -12,18 +12,19 @@
 
 Area(-5)
 
-SmallestElement = (x) => {
-  if(Array.isArray(x)){
-    Math.min(x)
+SmallestElement = (array) =>{
+  if (Array.isArray(array)){
+    array.map(parseFloat);
+    console.log(Math.min(array));
   }
   else{
-    console.log("not an array")
+    console.log("the given element is not an array.")
   }
 }
 
-let aray = [9,5,6,10,2]
+let aray = [9,5,6,10,2];
 
-SmallestElement(aray)
+SmallestElement(aray);
 
 class Person{
     constructor (age, race, weight) {
